@@ -1,5 +1,7 @@
 <h1>Add Cat to the list!</h1>
 
+<%= render 'form', action: :new, cat: @cat%>
+<!-- 
 <form action=<%= cats_url %> method="post">
     <label for="name">name</label>
     <input type="text" id="name" name="cat[name]"> <br>
@@ -25,4 +27,4 @@
     <textarea name="cat[description]" id="description" cols="30" rows="10"></textarea> <br>
 
     <input type="submit" value="Add cat to Cat List">
-</form>
+</form> -->

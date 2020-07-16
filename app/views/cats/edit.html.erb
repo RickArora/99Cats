@@ -1,5 +1,9 @@
 <h1>Edit Cat in the list!</h1>
 
+<%= render 'form', cat: @cat, action: :edit%>
+
+<!-- 
+
 <form action=<%= cats_url+'/'+@cat.id.to_s %> method="post">
     <input type="hidden" name="_method" value="PATCH">
     <label for="name">name</label>
@@ -27,4 +31,4 @@
     </textarea> <br>
 
     <input type="submit" value="Edit cat">
-</form>
+</form> -->
