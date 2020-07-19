@@ -10,16 +10,18 @@ Things to change:
 
 <% if action == :edit %>
 <%action_url = cat_url(cat)%>
+<%value = 'update cat'%>
 <%else%>
 <%action_url = cats_url%>
+<%value = 'create cat'%>
+<%end%>
 
 <form action=<%= action_url %> method="post">
     <%if action == :edit %>
-        <input type="hidden" name="_method" value="PATCH">
+    <input type="hidden" name="_method" value="PATCH">
     <%end%>
     <label for="name">name</label>
     <input type="text" id="name" name="cat[name]" value="<%= cat.name%>"> <br>
-
 
     <input type="radio" id="sex" name="cat[sex]" value="M">
     <label for="sex">Male</label> <br>
@@ -42,5 +44,5 @@ Things to change:
         <%= cat.description %>
     </textarea> <br>
 
-    <input type="submit" value="<%(action == :edit) ? 'update cat' : 'add cat'%>">
+    <input type="submit" value="<%= value%>">
 </form>

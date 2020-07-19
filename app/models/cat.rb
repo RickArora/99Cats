@@ -15,4 +15,10 @@ class Cat < ApplicationRecord
         current_age = distance_of_time_in_words(birth_time, current_time)
         current_age
     end
+
+    has_many(:cat_rental_requests,[
+        primary_key: :id, 
+        foreign_key: :cat_id,
+        class_name: :cat_rental_requests
+    ])
 end
