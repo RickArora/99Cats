@@ -7,6 +7,6 @@ class CreateCatRentalRequests < ActiveRecord::Migration[5.2]
       t.string :status, null: false 
       t.timestamps
     end
-    add_index(:cat_id)
+    add_index(:cats,:id)
   end
 end

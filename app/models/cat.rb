@@ -16,9 +16,9 @@ class Cat < ApplicationRecord
         current_age
     end
 
-    has_many(:cat_rental_requests,[
+    has_many(:cat_rental_requests,{
         primary_key: :id, 
         foreign_key: :cat_id,
         class_name: :cat_rental_requests
-    ])
+    })
 end
